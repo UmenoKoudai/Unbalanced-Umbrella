@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float _timeToAngle;
     Rigidbody2D _rb;
     float _rotationX;
+
+    public int MoveSpeed { get => _moveSpeed; }
     
     void Start()
     {
