@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform _umbrella;
     [SerializeField] int _moveSpeed;
     [SerializeField] float _timeToAngle;
-    [SerializeField] float _timeToAngleAuto;
     Rigidbody2D _rb;
     float _rotationX;
     
@@ -24,8 +23,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         float x = Input.GetAxisRaw("Horizontal");
-        
-        float RandamZ = Random.Range(-1f, 1f);
         Vector2 dir = new Vector2(x, 0f);
         if(dir.magnitude != 0)
         {
