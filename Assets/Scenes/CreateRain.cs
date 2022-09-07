@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider2D))]
 public class CreateRain : MonoBehaviour
 {
     [SerializeField] GameObject _rain;
@@ -23,7 +24,7 @@ public class CreateRain : MonoBehaviour
         if(_timer >= _intarval)
         {
             GameObject rain = Instantiate(_rain);
-            rain.transform.position = new Vector2(randamX, randamY);
+            rain.transform.position = new Vector2(transform.position.x + randamX, transform.position.y + randamY);
             _timer = 0;
         }
     }
