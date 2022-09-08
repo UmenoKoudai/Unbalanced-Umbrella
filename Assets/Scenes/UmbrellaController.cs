@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UmbrellaController : MonoBehaviour
 {
     [SerializeField] int _score;
+    [SerializeField] Image _umbrellaFull;
     Rigidbody2D _rb;
     PlayerController _player;
     GameManager _gameManager;
@@ -22,11 +24,13 @@ public class UmbrellaController : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         _rb.velocity = new Vector2(x, 0f) * _player.MoveSpeed;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Rain")
+        if (collision.gameObject.tag == "Rain")
         {
+            _umbrellaFull.fillAmount += 0.01f;
             _gameManager.AddScore(_score);
+            Destroy(collision.gameObject);
         }
     }
 }
