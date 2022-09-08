@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            _umbrella.Rotate(0f, 0f, -_rotationX * _timeToAngle);
+            _umbrella.Rotate(0f, 0f, _rotationX * _timeToAngle);
         }
         _rb.velocity = new Vector2(x, 0f) * _moveSpeed;
 ;    }

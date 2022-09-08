@@ -1,13 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Rain : MonoBehaviour
 {
-    
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 1.5f);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "UmbrellaWall")
+        {
+            Destroy(gameObject);
+        }
     }
 }

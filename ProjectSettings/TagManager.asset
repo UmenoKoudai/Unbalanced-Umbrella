@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Rain
+  - Umbrella
+  - UmbrellaFull
+  - UmbrellaWall
   layers:
   - Default
   - TransparentFX
@@ -13,8 +16,8 @@ TagManager:
   - Water
   - UI
   - Umbrella
-  - 
-  - 
+  - Rain
+  - Wall
   - 
   - 
   - 
