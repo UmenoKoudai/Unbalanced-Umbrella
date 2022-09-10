@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("NormalEnd");
+                SceneManager.LoadScene("BadEnd");
             }
         }
     }
