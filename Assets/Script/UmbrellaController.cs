@@ -7,6 +7,7 @@ public class UmbrellaController : MonoBehaviour
 {
     [SerializeField] int _score;
     [SerializeField] Image _umbrellaFull;
+    [SerializeField] Transform _playerPotition;
     Rigidbody2D _rb;
     PlayerController _player;
     GameManager _gameManager;
@@ -21,6 +22,7 @@ public class UmbrellaController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.position = new Vector3(_playerPotition.position.x, _playerPotition.position.y + 2.5f, 0f);
         float x = Input.GetAxisRaw("Horizontal");
         _rb.velocity = new Vector2(x, 0f) * _player.MoveSpeed;
     }

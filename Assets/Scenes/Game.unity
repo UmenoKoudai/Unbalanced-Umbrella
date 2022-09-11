@@ -442,10 +442,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -5538,7 +5538,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &927930853
 Transform:
   m_ObjectHideFlags: 0
@@ -5566,7 +5566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24544c24af1738f4ea75a99aa3190d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rain: {fileID: 2723107401602149219, guid: 8ce39bffd72e8014286fa6a0fb4a04d9, type: 3}
+  _rain: {fileID: 931244856846820748, guid: b2701dbb5f8f2f34fb5966dec5aea620, type: 3}
   _intarval: 0.1
   _rainPositiopn: 1
 --- !u!61 &927930855
@@ -6287,6 +6287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _score: 1
   _umbrellaFull: {fileID: 502384983}
+  _playerPotition: {fileID: 1823449344}
 --- !u!1 &1823449338
 GameObject:
   m_ObjectHideFlags: 0
@@ -6338,7 +6339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _umbrella: {fileID: 1777368166}
   _moveSpeed: 10
-  _timeToAngle: 0.5
+  _timeToAngle: 0.09
 --- !u!50 &1823449341
 Rigidbody2D:
   serializedVersion: 4
@@ -6552,7 +6553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2094478395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6565,8 +6566,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24544c24af1738f4ea75a99aa3190d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rain: {fileID: 2723107401602149219, guid: 8ce39bffd72e8014286fa6a0fb4a04d9, type: 3}
-  _intarval: 0.03
+  _rain: {fileID: 931244856846820748, guid: b2701dbb5f8f2f34fb5966dec5aea620, type: 3}
+  _intarval: 0.1
   _rainPositiopn: 0
 --- !u!61 &2094478396
 BoxCollider2D:

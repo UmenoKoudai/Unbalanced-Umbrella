@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] int _moveSpeed;
     [SerializeField] float _timeToAngle;
     Rigidbody2D _rb;
+    Animator _anim;
     float _rotationX;
 
     public int MoveSpeed { get => _moveSpeed; }
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _anim = GetComponent<Animator>();
 ;    }
 
     void Update()
@@ -35,6 +37,10 @@ public class PlayerController : MonoBehaviour
         else
         {
             _umbrella.Rotate(0f, 0f, _rotationX * _timeToAngle);
+        }
+        if(Mathf.Abs(x) >= 1)
+        {
+            _anim.Play("Player");
         }
         _rb.velocity = new Vector2(x, 0f) * _moveSpeed;
 ;    }

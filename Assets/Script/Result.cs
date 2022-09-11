@@ -19,7 +19,7 @@ public class Result : MonoBehaviour
 
     IEnumerator ResuleCount()
     {
-        _resultText.DOCounter(_result, GameManager._fullUmbrellaCount * 100, 1f);
+        _resultText.DOCounter(_result, GameManager._totalScore, 1f);
         yield return new WaitForSeconds(1.5f);
         _anim.Play("Result");
     }

@@ -23,14 +23,15 @@ public class CreateRain : MonoBehaviour
         if (_timer >= _intarval)
         {
             GameObject rain = Instantiate(_rain);
-            if (_rainPositiopn)
-            {
-                rain.transform.position = new Vector2(transform.position.x + randamX, transform.position.y + randamY);
-            }
-            else
-            {
-                rain.transform.position = new Vector2(transform.position.x + randamX, transform.position.y + (_bc.offset.y) / 2 + (_bc.size.y) / 2);
-            }
+            rain.transform.position = new Vector2(transform.position.x + randamX, transform.position.y + (_bc.offset.y) / 2 + (_bc.size.y) / 2);
+            //if (_rainPositiopn)
+            //{
+            //    rain.transform.position = new Vector2(transform.position.x + randamX, transform.position.y + randamY);
+            //}
+            //else
+            //{
+            //    rain.transform.position = new Vector2(transform.position.x + randamX, transform.position.y + (_bc.offset.y) / 2 + (_bc.size.y) / 2);
+            //}
             rain.transform.SetParent(transform);
             _timer = 0;
         }
